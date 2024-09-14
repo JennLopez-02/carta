@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #fae1dd;
+}
+.container{
+    position: relative;
+}
+.valentines{
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+}
+.envelope{
+    position: relative;
+    width: 351px;
+    height: 240px;
+    background: #f08080;
+    display: grid;
+    place-items: center;
+}
+.envelope::before{
+    content: '';
+    position: absolute;
+    width: 248px;
+    height: 248px;
+    background: #f08080;
+    transform: rotate(45deg);
+    top: -125px;
+    left: 51.5px;
+    border-radius: 20px 0 0 0;
+}
+.front{
+    position: absolute;
+    border-right: 180px solid #f4978e;
+    border-top: 121px solid transparent;
+    border-bottom: 120px solid transparent;
+    left: 171px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+.front::before{
+    position: absolute;
+    content: '';
+    border-left: 351.5px solid #fda996;
+    border-top: 240px solid transparent;
+    left: -170.5px;
+    top:-120px;
+}
+.card{
+    position: relative;
+    width: 280px;
+    height: 230px;
+    background: #fff;
+    display: grid;
+    text-align: center;
+    place-items: center;
+    transition: 1s;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    top:9px;
+    left: 9px;
+    right: 9px;
+    bottom:9px;
+    border: 2px solid #003049;
+    border-style: dashed;
+}
+.valentines:hover .card{
+    transform: translateY(-140px);
+}
+.card .text{
+    font-family: "Caveat", cursive;
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+    color: #003049;
+}
